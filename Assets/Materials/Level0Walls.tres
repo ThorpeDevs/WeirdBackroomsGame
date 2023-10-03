@@ -1,4 +1,4 @@
-[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dnp0mhh2ri56f"]
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://b8lhptqyewt8q"]
 
 [ext_resource type="Texture2D" uid="uid://xy0s1n3xq8kg" path="res://Assets/Images/Level0Wall/Albedo.jpeg" id="1_fcy33"]
 [ext_resource type="Texture2D" uid="uid://dced4gxr2huei" path="res://Assets/Images/Level0Wall/Normal.jpeg" id="2_uej7u"]
@@ -7,3 +7,5 @@
 albedo_texture = ExtResource("1_fcy33")
 normal_enabled = true
 normal_texture = ExtResource("2_uej7u")
+uv1_triplanar = true
+uv1_world_triplanar = true

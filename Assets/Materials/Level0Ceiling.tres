@@ -1,0 +1,23 @@
+[gd_resource type="StandardMaterial3D" load_steps=7 format=3 uid="uid://blrvn1cgaut21"]
+
+[ext_resource type="Texture2D" uid="uid://cupnmaxkvi2nd" path="res://Assets/Images/Level0Ceiling/Level0Ceiling Albedo.jpg" id="1_iqndo"]
+[ext_resource type="Texture2D" uid="uid://clw3toikapi33" path="res://Assets/Images/Level0Ceiling/Level0Ceiling AO.jpg" id="2_psb7h"]
+[ext_resource type="Texture2D" uid="uid://cpxajr6wqona0" path="res://Assets/Images/Level0Ceiling/Level0Ceiling Emissions.jpg" id="3_7xry0"]
+[ext_resource type="Texture2D" uid="uid://cks472dru1mkq" path="res://Assets/Images/Level0Ceiling/Level0Ceiling Metalic.jpg" id="4_gpc0m"]
+[ext_resource type="Texture2D" uid="uid://caeeisn5x480j" path="res://Assets/Images/Level0Ceiling/Level0Ceiling NormalGL.jpg" id="5_5aify"]
+[ext_resource type="Texture2D" uid="uid://du74ba1r36sfx" path="res://Assets/Images/Level0Ceiling/Level0Ceiling Rougness.jpg" id="6_2hcov"]
+
+[resource]
+albedo_texture = ExtResource("1_iqndo")
+metallic = 1.0
+metallic_texture = ExtResource("4_gpc0m")
+roughness_texture = ExtResource("6_2hcov")
+emission_enabled = true
+emission_texture = ExtResource("3_7xry0")
+normal_enabled = true
+normal_texture = ExtResource("5_5aify")
+ao_enabled = true
+ao_texture = ExtResource("2_psb7h")
+uv1_scale = Vector3(0.3, 0.3, 0.3)
+uv1_triplanar = true
+uv1_world_triplanar = true

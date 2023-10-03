@@ -1,8 +1,8 @@
 [gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://be0qbugonatt3"]
 
-[ext_resource type="Texture2D" uid="uid://ddn0hgubcyias" path="res://Assets/Images/Fabric025/Level0Floor Albedo.png" id="1_wtj5l"]
-[ext_resource type="Texture2D" uid="uid://c752bxf170iow" path="res://Assets/Images/Fabric025/Fabric025_4K-PNG_NormalGL.png" id="2_2671o"]
-[ext_resource type="Texture2D" uid="uid://do1e4uy0hsmp5" path="res://Assets/Images/Fabric025/Fabric025_4K-PNG_Roughness.png" id="3_gtw4e"]
+[ext_resource type="Texture2D" uid="uid://ddn0hgubcyias" path="res://Assets/Images/Level0Floor/Level0Floor Albedo.png" id="1_wtj5l"]
+[ext_resource type="Texture2D" uid="uid://c752bxf170iow" path="res://Assets/Images/Level0Floor/Level0Floor Normal GL.png" id="2_2671o"]
+[ext_resource type="Texture2D" uid="uid://do1e4uy0hsmp5" path="res://Assets/Images/Level0Floor/Level0Floor Roughness.png" id="3_gtw4e"]
 
 [resource]
 albedo_texture = ExtResource("1_wtj5l")

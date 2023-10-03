@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bu1q83a83fx60"]
+[gd_scene load_steps=5 format=3 uid="uid://bjwfh2wo63k7a"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_tfmmm"]
+[ext_resource type="Environment" uid="uid://cmrugnnem3okn" path="res://Assets/DefaultEnviroment.tres" id="2_l3gr5"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_mxeup"]
 
@@ -19,3 +20,5 @@ shape = SubResource("CapsuleShape3D_55gl1")
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.521283, -0.00369275)
+environment = ExtResource("2_l3gr5")
+current = true

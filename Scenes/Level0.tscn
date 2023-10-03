@@ -1,9 +1,100 @@
-[gd_scene load_steps=2 format=3 uid="uid://dpfg8qpsxngt"]
+[gd_scene load_steps=7 format=3 uid="uid://dpfg8qpsxngt"]
+
+[ext_resource type="Material" uid="uid://be0qbugonatt3" path="res://Assets/Materials/Level0Floor.tres" id="1_b28ku"]
+[ext_resource type="Material" uid="uid://b8lhptqyewt8q" path="res://Assets/Materials/Level0Walls.tres" id="2_bj3tp"]
+[ext_resource type="PackedScene" uid="uid://bjwfh2wo63k7a" path="res://Scenes/PlayerCharacter.tscn" id="3_uen7s"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_x2nc3"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_eq1jx"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_j16t2"]
+
 [node name="Level0" type="Node3D"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.0705764, 0, 0, 0, 1, 0, 0, 0)
+[node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(282.815, 0, 0, 0, 0.0705764, 0, 0, 0, 280.709, 0, 0, 0)
+material_override = ExtResource("1_b28ku")
 mesh = SubResource("BoxMesh_x2nc3")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
+shape = SubResource("BoxShape3D_eq1jx")
+
+[node name="Walls" type="Node" parent="."]
+
+[node name="BaseWall" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(0.150677, 0, 0, 0, 4.26082, 0, 0, 0, 39.4004, 1.56964, 2.13113, -0.189152)
+material_override = ExtResource("2_bj3tp")
+mesh = SubResource("BoxMesh_j16t2")
+skeleton = NodePath("../..")
+
+[node name="BaseWall2" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(0.151189, 0, 0, 0, 4.27531, 0, 0, 0, 20.1077, -5.10733, 2.13113, 8.68315)
+material_override = ExtResource("2_bj3tp")
+mesh = SubResource("BoxMesh_j16t2")
+skeleton = NodePath("../..")
+
+[node name="BaseWall5" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(-6.6087e-09, 0, 12.677, 0, 4.27531, 0, -0.151189, 0, -5.54128e-07, -14.1574, 2.13113, 5.05242)
+material_override = ExtResource("2_bj3tp")
+mesh = SubResource("BoxMesh_j16t2")
+skeleton = NodePath("../..")
+
+[node name="BaseWall10" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(-6.6179e-09, 0, 22.1155, 0, 4.28126, 0, -0.1514, 0, -9.66697e-07, -9.46745, 2.15455, 18.3109)
+material_override = ExtResource("2_bj3tp")
+mesh = SubResource("BoxMesh_j16t2")
+skeleton = NodePath("../..")
+
+[node name="BaseWall3" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(0.151189, 0, 0, 0, 4.27531, 0, 0, 0, 9.24551, -5.10809, 2.13113, -8.32571)
+material_override = ExtResource("2_bj3tp")
+mesh = SubResource("BoxMesh_j16t2")
+skeleton = NodePath("../..")
+
+[node name="BaseWall11" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(0.151189, 0, 0, 0, 4.27531, 0, 0, 0, 9.24551, -5.10809, 2.13113, -18.7851)
+material_override = ExtResource("2_bj3tp")
+mesh = SubResource("BoxMesh_j16t2")
+skeleton = NodePath("../..")
+
+[node name="BaseWall12" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(0.143289, 0, 0, 0, 4.27531, 0, 0, 0, 9.24551, -1.66529, 2.14035, -13.3778)
+material_override = ExtResource("2_bj3tp")
+mesh = SubResource("BoxMesh_j16t2")
+skeleton = NodePath("../..")
+
+[node name="BaseWall6" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(0.151189, 0, 0, 0, 4.27531, 0, 0, 0, 18.0491, -14.4157, 2.13113, -6.8478)
+material_override = ExtResource("2_bj3tp")
+mesh = SubResource("BoxMesh_j16t2")
+skeleton = NodePath("../..")
+
+[node name="BaseWall7" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(0.151189, 0, 0, 0, 4.27531, 0, 0, 0, 31.3, -20.546, 2.13113, 12.6209)
+material_override = ExtResource("2_bj3tp")
+mesh = SubResource("BoxMesh_j16t2")
+skeleton = NodePath("../..")
+
+[node name="BaseWall8" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(0.151189, 0, 0, 0, 4.27531, 0, 0, 0, 10.5329, -20.546, 2.13113, -15.3769)
+material_override = ExtResource("2_bj3tp")
+mesh = SubResource("BoxMesh_j16t2")
+skeleton = NodePath("../..")
+
+[node name="BaseWall4" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(123.162, 0, 0, 0, 4.2872, 0, 0, 0, 0.183855, -3.48233, 2.07877, -7.06055)
+material_override = ExtResource("2_bj3tp")
+mesh = SubResource("BoxMesh_j16t2")
+skeleton = NodePath("../..")
+
+[node name="BaseWall9" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(22.8253, 0, 0, 0, 4.2872, 0, 0, 0, 0.183855, -9.05831, 2.13113, -19.9707)
+material_override = ExtResource("2_bj3tp")
+mesh = SubResource("BoxMesh_j16t2")
+skeleton = NodePath("../..")
+
+[node name="PlayerCharacter" parent="." instance=ExtResource("3_uen7s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4104, 0.989383, -1.10811)

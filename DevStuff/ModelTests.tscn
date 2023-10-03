@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0t30857u2ev5"]
+
+[ext_resource type="Material" uid="uid://dnp0mhh2ri56f" path="res://Assets/Materials/Level0Walls.tres" id="1_yf4jo"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5y6r8"]
+
+[node name="ModelTests" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.81062, 0, 0)
+material_override = ExtResource("1_yf4jo")
+mesh = SubResource("BoxMesh_5y6r8")

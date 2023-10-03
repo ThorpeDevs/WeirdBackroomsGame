@@ -1,9 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://dpfg8qpsxngt"]
+[gd_scene load_steps=22 format=3 uid="uid://dpfg8qpsxngt"]
 
 [ext_resource type="Material" uid="uid://be0qbugonatt3" path="res://Assets/Materials/Level0Floor.tres" id="1_b28ku"]
 [ext_resource type="Material" uid="uid://b8lhptqyewt8q" path="res://Assets/Materials/Level0Walls.tres" id="2_bj3tp"]
 [ext_resource type="Material" uid="uid://blrvn1cgaut21" path="res://Assets/Materials/Level0Ceiling.tres" id="2_pumt7"]
 [ext_resource type="PackedScene" uid="uid://bjwfh2wo63k7a" path="res://Scenes/PlayerCharacter.tscn" id="3_uen7s"]
+[ext_resource type="PackedScene" uid="uid://dplpr5lrlxrdp" path="res://Assets/Models/Light.fbx" id="5_lryr4"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_x2nc3"]
 
@@ -49,14 +50,14 @@ mesh = SubResource("BoxMesh_x2nc3")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
 shape = SubResource("BoxShape3D_eq1jx")
 
-[node name="Floor2" type="MeshInstance3D" parent="."]
+[node name="Ceiling" type="MeshInstance3D" parent="."]
 transform = Transform3D(282.815, 0, 0, 0, 0.0705764, 0, 0, 0, 280.709, 0, 4.20897, 0)
 material_override = ExtResource("2_pumt7")
 mesh = SubResource("BoxMesh_x2nc3")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Floor2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor2/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/StaticBody3D"]
 shape = SubResource("BoxShape3D_eq1jx")
 
 [node name="Walls" type="Node" parent="."]
@@ -628,5 +629,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4104, 0.989383, -1.10811)
 [node name="Lighting" type="Node" parent="."]
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lighting"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.96793, 3.19796, -1.8349)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.96793, 3.19796, -1.69901)
 light_color = Color(1, 0.917647, 0, 1)
+
+[node name="Light" parent="." instance=ExtResource("5_lryr4")]
+transform = Transform3D(-0.394332, 8.74228e-08, 0, -3.44736e-08, -1, 0, 0, 0, 0.401014, -1.96146, 4.28591, -1.70674)

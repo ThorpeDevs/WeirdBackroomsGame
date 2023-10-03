@@ -1,5 +1,15 @@
 [gd_resource type="Environment" format=3 uid="uid://cmrugnnem3okn"]
 
 [resource]
+ambient_light_source = 2
+ambient_light_color = Color(0.0117647, 0.0117647, 0.0117647, 1)
+tonemap_mode = 2
+tonemap_exposure = 2.5
+ssil_enabled = true
+sdfgi_read_sky_light = false
+glow_enabled = true
+glow_intensity = 0.2
+glow_bloom = 0.25
+glow_blend_mode = 0
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.1115

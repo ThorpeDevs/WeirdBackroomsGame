@@ -1,5 +1,6 @@
-[gd_scene load_steps=22 format=3 uid="uid://dpfg8qpsxngt"]
+[gd_scene load_steps=23 format=3 uid="uid://dpfg8qpsxngt"]
 
+[ext_resource type="Environment" uid="uid://cmrugnnem3okn" path="res://Assets/DefaultEnviroment.tres" id="1_8h3w3"]
 [ext_resource type="Material" uid="uid://be0qbugonatt3" path="res://Assets/Materials/Level0Floor.tres" id="1_b28ku"]
 [ext_resource type="Material" uid="uid://b8lhptqyewt8q" path="res://Assets/Materials/Level0Walls.tres" id="2_bj3tp"]
 [ext_resource type="Material" uid="uid://blrvn1cgaut21" path="res://Assets/Materials/Level0Ceiling.tres" id="2_pumt7"]
@@ -39,6 +40,9 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_inl2d"]
 
 [node name="Level0" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_8h3w3")
 
 [node name="Floor" type="MeshInstance3D" parent="."]
 transform = Transform3D(282.815, 0, 0, 0, 0.0705764, 0, 0, 0, 280.709, 0, 0, 0)
@@ -173,7 +177,6 @@ skeleton = NodePath("../..")
 shape = SubResource("BoxShape3D_xm5na")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Walls/BaseWall5/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_xm5na")
 
 [node name="BaseWall44" type="MeshInstance3D" parent="Walls"]
@@ -188,7 +191,6 @@ skeleton = NodePath("../..")
 shape = SubResource("BoxShape3D_xm5na")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Walls/BaseWall44/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_xm5na")
 
 [node name="BaseWall45" type="MeshInstance3D" parent="Walls"]
@@ -203,7 +205,6 @@ skeleton = NodePath("../..")
 shape = SubResource("BoxShape3D_xm5na")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Walls/BaseWall45/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_xm5na")
 
 [node name="BaseWall46" type="MeshInstance3D" parent="Walls"]
@@ -218,7 +219,6 @@ skeleton = NodePath("../..")
 shape = SubResource("BoxShape3D_xm5na")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Walls/BaseWall46/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_xm5na")
 
 [node name="BaseWall48" type="MeshInstance3D" parent="Walls"]
@@ -233,7 +233,6 @@ skeleton = NodePath("../..")
 shape = SubResource("BoxShape3D_xm5na")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Walls/BaseWall48/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_xm5na")
 
 [node name="BaseWall17" type="MeshInstance3D" parent="Walls"]
@@ -628,9 +627,102 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4104, 0.989383, -1.10811)
 
 [node name="Lighting" type="Node" parent="."]
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Lighting"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.96793, 3.19796, -1.69901)
-light_color = Color(1, 0.917647, 0, 1)
+[node name="Light" parent="Lighting" instance=ExtResource("5_lryr4")]
+transform = Transform3D(-0.394332, 8.74228e-08, 0, -3.44736e-08, -1, 0, 0, 0, 0.401014, -1.7437, 4.26, -3.39007)
 
-[node name="Light" parent="." instance=ExtResource("5_lryr4")]
-transform = Transform3D(-0.394332, 8.74228e-08, 0, -3.44736e-08, -1, 0, 0, 0, 0.401014, -1.96146, 4.28591, -1.70674)
+[node name="SpotLight3D" type="SpotLight3D" parent="Lighting/Light"]
+transform = Transform3D(1, -2.21699e-07, 9.69075e-15, 0, -4.37114e-08, -1, 2.21699e-07, 1, -4.37114e-08, 0, 0.23, 0)
+visible = false
+light_color = Color(1, 0.976471, 0.756863, 1)
+light_volumetric_fog_energy = 0.5
+light_specular = 1.0
+shadow_enabled = true
+spot_range = 7.0
+spot_attenuation = 1.41421
+spot_angle = 55.0
+spot_angle_attenuation = 1.68179
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lighting/Light"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.23, 0)
+light_color = Color(1, 0.976471, 0.756863, 1)
+light_energy = 0.3
+light_volumetric_fog_energy = 0.8
+light_specular = 1.0
+shadow_bias = 0.6
+shadow_blur = 5.0
+omni_range = 6.5
+
+[node name="Light2" parent="Lighting" instance=ExtResource("5_lryr4")]
+transform = Transform3D(-0.394332, 8.74228e-08, 0, -3.44736e-08, -1, 0, 0, 0, 0.401014, -1.7437, 4.26, 2.60993)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Lighting/Light2"]
+transform = Transform3D(1, -2.21699e-07, 9.69075e-15, 0, -4.37114e-08, -1, 2.21699e-07, 1, -4.37114e-08, 0.0618806, 0.231884, -0.0134106)
+visible = false
+light_color = Color(1, 0.976471, 0.756863, 1)
+light_volumetric_fog_energy = 0.5
+light_specular = 1.0
+shadow_enabled = true
+spot_range = 7.0
+spot_attenuation = 1.41421
+spot_angle = 55.0
+spot_angle_attenuation = 1.68179
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lighting/Light2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.23, 0)
+light_color = Color(1, 0.976471, 0.756863, 1)
+light_energy = 0.3
+light_volumetric_fog_energy = 0.8
+light_specular = 1.0
+shadow_bias = 0.6
+shadow_blur = 5.0
+omni_range = 6.5
+
+[node name="Light3" parent="Lighting" instance=ExtResource("5_lryr4")]
+transform = Transform3D(-0.394332, 8.74228e-08, 0, -3.44736e-08, -1, 0, 0, 0, 0.401014, -1.7437, 4.26, 8.60993)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Lighting/Light3"]
+transform = Transform3D(1, -2.21699e-07, 9.69075e-15, 0, -4.37114e-08, -1, 2.21699e-07, 1, -4.37114e-08, 0.0618806, 0.231884, -0.0134106)
+visible = false
+light_color = Color(1, 0.976471, 0.756863, 1)
+light_volumetric_fog_energy = 0.5
+light_specular = 1.0
+shadow_enabled = true
+spot_range = 7.0
+spot_attenuation = 1.41421
+spot_angle = 55.0
+spot_angle_attenuation = 1.68179
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lighting/Light3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.23, 0)
+light_color = Color(1, 0.976471, 0.756863, 1)
+light_energy = 0.3
+light_volumetric_fog_energy = 0.8
+light_specular = 1.0
+shadow_bias = 0.6
+shadow_blur = 5.0
+omni_range = 6.5
+
+[node name="Light4" parent="Lighting" instance=ExtResource("5_lryr4")]
+transform = Transform3D(-0.394332, 8.74228e-08, 0, -3.44736e-08, -1, 0, 0, 0, 0.401014, -1.7437, 4.26, 14.6099)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Lighting/Light4"]
+transform = Transform3D(1, -2.21699e-07, 9.69075e-15, 0, -4.37114e-08, -1, 2.21699e-07, 1, -4.37114e-08, 0.0618806, 0.231884, -0.0134106)
+visible = false
+light_color = Color(1, 0.976471, 0.756863, 1)
+light_volumetric_fog_energy = 0.5
+light_specular = 1.0
+shadow_enabled = true
+spot_range = 7.0
+spot_attenuation = 1.41421
+spot_angle = 55.0
+spot_angle_attenuation = 1.68179
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lighting/Light4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.23, 0)
+light_color = Color(1, 0.976471, 0.756863, 1)
+light_energy = 0.3
+light_volumetric_fog_energy = 0.8
+light_specular = 1.0
+shadow_bias = 0.6
+shadow_blur = 5.0
+omni_range = 6.5

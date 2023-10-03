@@ -40,7 +40,7 @@ offset_right = 646.0
 offset_bottom = 363.0
 text = "Quit"
 
-[node name="Options" type="Control" parent="."]
+[node name="Options" type="Panel" parent="."]
 visible = false
 anchors_preset = 0
 offset_left = 192.0
@@ -164,6 +164,14 @@ visible = false
 anchors_preset = 0
 offset_right = 416.0
 offset_bottom = 248.0
+
+[node name="Quit2" type="Button" parent="Options"]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 336.0
+offset_right = 430.0
+offset_bottom = 371.0
+text = "Quit"
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 1

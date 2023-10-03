@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://inv4gppu76id"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Main" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Main"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 45.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "Backrroms Gamem"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Play" type="Button" parent="Main"]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 250.0
+offset_right = 650.0
+offset_bottom = 285.0
+text = "Play"
+
+[node name="Options" type="Button" parent="Main"]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 290.0
+offset_right = 650.0
+offset_bottom = 325.0
+text = "Options"
+
+[node name="Quit" type="Button" parent="Main"]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 330.0
+offset_right = 650.0
+offset_bottom = 365.0
+text = "Quit"

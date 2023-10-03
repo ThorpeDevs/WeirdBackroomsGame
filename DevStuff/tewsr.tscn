@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b1g30fk0o1vlw"]
 
-[ext_resource type="Material" uid="uid://be0qbugonatt3" path="res://Assets/Materials/Fabric025.tres" id="1_v4mr1"]
-[ext_resource type="Material" uid="uid://b8lhptqyewt8q" path="res://Assets/Materials/Level0Walls.tres" id="2_y45sr"]
+[ext_resource type="Material" uid="uid://be0qbugonatt3" path="res://Assets/Materials/Fabric025.tres" id="1_2y2eb"]
+[ext_resource type="Material" uid="uid://b8lhptqyewt8q" path="res://Assets/Materials/Level0Walls.tres" id="2_4to7w"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_oxljj"]
 
@@ -10,9 +10,9 @@
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 10, 0, 0, 0, 7, 0, 0, 0)
 mesh = SubResource("BoxMesh_oxljj")
-surface_material_override/0 = ExtResource("1_v4mr1")
+surface_material_override/0 = ExtResource("1_2y2eb")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(7, 0, 0, 0, 10, 0, 0, 0, 7, 0, 0, 10)
 mesh = SubResource("BoxMesh_oxljj")
-surface_material_override/0 = ExtResource("2_y45sr")
+surface_material_override/0 = ExtResource("2_4to7w")

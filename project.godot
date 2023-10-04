@@ -14,10 +14,20 @@ config/name="Backrooms Game"
 run/main_scene="res://Scenes/Menu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
+config/discord_application_id="1099618430065324082"
+
+[autoload]
+
+DiscordSDKLoader="*res://addons/discord-sdk-gd/nodes/core_updater.gd"
+Game="*res://Scripts/Game.gd"
 
 [dotnet]
 
 project/assembly_name="Backrooms Game"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/discord-sdk-gd/plugin.cfg")
 
 [input]
 

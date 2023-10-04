@@ -12,4 +12,4 @@ glow_intensity = 0.2
 glow_bloom = 0.25
 glow_blend_mode = 0
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.1115
+volumetric_fog_density = 0.08

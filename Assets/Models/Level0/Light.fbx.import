@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dplpr5lrlxrdp"
-path="res://.godot/imported/Light.fbx-d3197e2681cbae25cb20e92050e6235b.scn"
+path="res://.godot/imported/Light.fbx-a0e9233f66067ede84d5b2bd6ba5aff4.scn"
 
 [deps]
 
-source_file="res://Assets/Models/Light.fbx"
-dest_files=["res://.godot/imported/Light.fbx-d3197e2681cbae25cb20e92050e6235b.scn"]
+source_file="res://Assets/Models/Level0/Light.fbx"
+dest_files=["res://.godot/imported/Light.fbx-a0e9233f66067ede84d5b2bd6ba5aff4.scn"]
 
 [params]
 

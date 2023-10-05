@@ -1,6 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://b0t30857u2ev5"]
+[gd_scene load_steps=6 format=3 uid="uid://b0t30857u2ev5"]
 
 [ext_resource type="Material" uid="uid://b8lhptqyewt8q" path="res://Assets/Materials/Level0Walls.tres" id="1_yf4jo"]
+[ext_resource type="Material" uid="uid://dy4balolk4xqs" path="res://Assets/Materials/Wood006.tres" id="2_vrfx7"]
+[ext_resource type="Material" uid="uid://blrvn1cgaut21" path="res://Assets/Materials/Level0Ceiling.tres" id="5_ii2oi"]
+[ext_resource type="Material" uid="uid://be0qbugonatt3" path="res://Assets/Materials/Level0Floor.tres" id="6_ijwx5"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_5y6r8"]
 
@@ -9,4 +12,19 @@
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.81062, 0, 0)
 material_override = ExtResource("1_yf4jo")
+mesh = SubResource("BoxMesh_5y6r8")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.81062, 0, 0)
+material_override = ExtResource("2_vrfx7")
+mesh = SubResource("BoxMesh_5y6r8")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.03403, 0, 0)
+material_override = ExtResource("5_ii2oi")
+mesh = SubResource("BoxMesh_5y6r8")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.96012, 0, 0)
+material_override = ExtResource("6_ijwx5")
 mesh = SubResource("BoxMesh_5y6r8")
